@@ -50,7 +50,9 @@
 ### Key Features <a name="key-features"></a>
 
 - [⭐️ Setup ]
+- [⭐️ Controllers specs ]
 - [⭐️ Creating data model ]
+- [⭐️ Processing data in models]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,10 +108,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [⭐️ Setup and controllers ]
-- [⭐️ Controllers specs ]
-- [⭐️ Creating data model ]
-- [⭐️ Processing data in models]
 - [⭐️ Views]
 - [⭐️ Forms]
 - [⭐️ Validations, model specs, and n+1 problems]
