@@ -53,6 +53,7 @@
 - [⭐️ Controllers specs ]
 - [⭐️ Creating data model ]
 - [⭐️ Processing data in models]
+- [⭐️ Validations, model specs]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +111,7 @@ Example command:
 
 - [⭐️ Views]
 - [⭐️ Forms]
-- [⭐️ Validations, model specs, and n+1 problems]
+- [⭐️ n+1 problems]
 - [⭐️ Add devise]
 - [⭐️ Add authorization rules]
 - [⭐️ Integration specs for views]
