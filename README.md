@@ -54,6 +54,8 @@
 - [⭐️ Creating data model ]
 - [⭐️ Processing data in models]
 - [⭐️ Validations, model specs]
+- [⭐️ Adding routes and controllers]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
