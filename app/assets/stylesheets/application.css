@@ -82,3 +82,22 @@ body {
   width: 100%;
   text-align: right;
 }
+
+.det {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post-details>h2 {
+  text-align: left;
+  width: 100%;
+}

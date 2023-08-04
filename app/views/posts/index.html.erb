@@ -1,31 +1,30 @@
 <h2>Here is the post for given User</h2>
+  <section class = 'user'>
+    <figure>
+      <image class = 'user-image' src = '<%= @user.photo %>' alt = '<%= @user.name %>'>
+    </figure>
+    <div class='user-info'>
+      <h2>User: <%= @user.name %> </h2>
+      <p>Number of posts: <%= @user.post_counter || 0 %> </p>
+    </div>
+  </section>
 
-<section>
-  <h3>User 3</h3>
-  <p>Number of posts: 3</p>
-</section>
+  <% @posts.each do |post| %>
+    <section class='user bio'  >
+      <h2>Post: <%= post.title %> </h2>
+      <p><%= post.text %></p>
+      <p class='cmts-likes'>
+        <span class='comments'>Comments: <%= post.comments.count %></span>
+        <span class='likes'>Likes: <%= post.likes.count %></span>
+      </p> 
+    </section>
 
-<section>
-  <h3>Post 1</h3>
-  <p>This is the first post</p>
-</section>
-
-<section>
-  <p><strong>User 1</strong> Comment 1</p>
-  <p><strong>User 2</strong> Comment 2</p>
-  <p><strong>User 3</strong> Comment 3</p>
-  <p><strong>User 1</strong> Comment 4</p>
-</section>
-<section>
-  <h3>Post 2</h3>
-  <p>This is the second post</p>
-</section>
-
-<section>
-  <p><strong>User 1</strong> Comment 1</p>
-  <p><strong>User 2</strong> Comment 2</p>
-  <p><strong>User 3</strong> Comment 3</p>
-  <p><strong>User 1</strong> Comment 4</p>
-</section>
-
-<button>Pagination</button>
+    <section class='user bio'>
+      <h2>Comments</h2>
+      <% post.comments.each do |comment| %>
+        <p><strong><%= comment.author.name %>: </strong> <%= comment.text %> </p>      
+      <% end %>
+    </section>
+  <% end %>
+  
+  <button>Pagination</button>
