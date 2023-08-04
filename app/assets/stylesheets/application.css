@@ -1,15 +1,84 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  box-shadow: 5px 5px 2px #333;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 3px 3px 10px #ccc;
+  width: 80%;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+}
+
+.user-info>p {
+  text-align: right;
+  width: 100%;
+}
+
+.bio {
+  flex-direction: column;
+  border: 1px solid #ccc;
+  gap: 10px;
+}
+
+.posts {
+  flex-direction: column;
+}
+
+.cmts-likes {
+  width: 100%;
+  text-align: right;
+}
