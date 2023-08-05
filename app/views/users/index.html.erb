@@ -4,10 +4,11 @@
   <figure>
     <img class='user-image' src= '<%= user.photo %>' alt="<%= user.name %>" />
   </figure>
-  
-  <section class='user-info'> 
-    <h2>User: <%= user.name %></h2>
-    <p>Number of post:<strong> <%= user.post_counter || 0 %> </strong> </p>
-  </section>
+  <%= link_to user_path(user.id) do  %>
+    <section class='user-info'> 
+      <h2>User: <%= user.name %></h2>
+      <p>Number of post:<strong> <%= user.post_counter || 0 %> </strong> </p>
+    </section>
+  <% end %>
 </article>
 <% end %>

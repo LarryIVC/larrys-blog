@@ -29,4 +29,4 @@
     </section>
   <% end %>
 <% end %>
-<button>See all posts</button>
+<%= link_to 'See all posts', user_posts_path(@user.id), class: 'button' %>

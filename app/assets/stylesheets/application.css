@@ -18,13 +18,16 @@ h2 {
   text-align: center;
 }
 
+.button,
 button {
   cursor: pointer;
   padding: 10px;
   box-shadow: 5px 5px 2px #333;
-  margin: 10px;
+  margin: 20px auto;
+  border: 2px solid #333;
   border-radius: 15px;
   font-size: 1rem;
+  width: auto;
 }
 
 a {
@@ -55,6 +58,10 @@ body {
   width: 80%;
 }
 
+.user > a {
+  justify-content: flex-start;
+}
+
 .user-image {
   width: 100px;
   height: 100px;
@@ -72,7 +79,7 @@ body {
   padding: 10px;
 }
 
-.user-info > p {
+.user-info>p {
   text-align: right;
   width: 100%;
 }
@@ -106,7 +113,7 @@ body {
   width: 100%;
 }
 
-.post-details > h2 {
+.post-details>h2 {
   text-align: left;
   width: 100%;
 }
