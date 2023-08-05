@@ -27,6 +27,15 @@ button {
   font-size: 1rem;
 }
 
+a {
+  display: flex;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   display: flex;
   flex-direction: column;
