@@ -21,7 +21,8 @@
 
     <section class='user bio'>
       <h2>Comments</h2>
-      <% post.comments.each do |comment| %>
+      <% post.return_five_recent_comments(post.id).each do |comment| %>
+      <%# <% post.comments.each do |comment| %>
         <p><strong><%= comment.author.name %>: </strong> <%= comment.text %> </p>      
       <% end %>
     </section>

@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  def self.return_five_recent_comments(post_id)
+  def return_five_recent_comments(post_id)
     post1 = Post.find(post_id)
     post1.comments.order(created_at: :desc).limit(5)
   end
