@@ -10,19 +10,21 @@
   </section>
 
   <% @posts.each do |post| %>
-    <section class='user bio'  >
-      <h2>Post: <%= post.title %> </h2>
-      <p><%= post.text %></p>
-      <p class='cmts-likes'>
-        <span class='comments'>Comments: <%= post.comments.count %></span>
-        <span class='likes'>Likes: <%= post.likes.count %></span>
-      </p> 
-    </section>
+    <%# here is the link to the post %>
+    <%= link_to user_post_path(@user.id, post.id) do %>
+      <section class='user bio'  >
+        <h2>Post: <%= post.title %> </h2>
+        <p><%= post.text %></p>
+        <p class='cmts-likes'>
+          <span class='comments'>Comments: <%= post.comments.count %></span>
+          <span class='likes'>Likes: <%= post.likes.count %></span>
+        </p> 
+      </section>
+    <% end %>
 
     <section class='user bio'>
       <h2>Comments</h2>
       <% post.return_five_recent_comments(post.id).each do |comment| %>
-      <%# <% post.comments.each do |comment| %>
         <p><strong><%= comment.author.name %>: </strong> <%= comment.text %> </p>      
       <% end %>
     </section>
