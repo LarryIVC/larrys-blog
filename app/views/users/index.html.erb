@@ -1,29 +1,14 @@
 <h1>Here is the list of Users</h1>
-<article>
-  <h2>User 1</h2>
-  <p>Number of post: 4</p>
+<% @users.each do |user| %>
+<article class='user'>
+  <figure>
+    <img class='user-image' src= '<%= user.photo %>' alt="<%= user.name %>" />
+  </figure>
+  <%= link_to user_path(user.id) do  %>
+    <section class='user-info'> 
+      <h2>User: <%= user.name %></h2>
+      <p>Number of post:<strong> <%= user.post_counter || 0 %> </strong> </p>
+    </section>
+  <% end %>
 </article>
-<article>
-  <h2>User 2</h2>
-  <p>Number of post: 5</p>
-</article>
-<article>
-  <h2>User 3</h2>
-  <p>Number of post: 3</p>
-</article>
-<article>
-  <h2>User 4</h2>
-  <p>Number of post: 6</p>
-</article>
-<article>
-  <h2>User 5</h2>
-  <p>Number of post: 2</p>
-</article>
-<article>
-  <h2>User 6</h2>
-  <p>Number of post: 1</p>
-</article>
-<article>
-  <h2>User 7</h2>
-  <p>Number of post: 0</p>
-</article>
+<% end %>

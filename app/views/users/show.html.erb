@@ -1,45 +1,32 @@
 <h2>Here details for a given user</h2>
 
-<h3>User 3</h3>
-<h4>Number of post: 4</h4>
+<section class='user'>
+  <figure >
+    <image class='user-image' src= '<%= @user.photo %>' alt="<%= @user.name %>">
+  </figure>
+  <div class='user-info'>
+    <h2>User: <%= @user.name %></h2>
+    <p>Number of post:<strong><%= @user.post_counter || 0 %></strong></p>
+  </div>
+</section>
 
-<h5>Bio</h5>
-<section>
+<section class='user bio'>
+<h2>Biography</h2>
   <p>
-    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor 
-    incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis 
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <%= @user.bio %>
   </p>
 </section>
 
-<section>
-
-  <h5>Post 1</h5>
-  <article>
-    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </article>
-
-  <h5>Post 2</h5>
-  <article>
-    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </article>
-
-  <h5>Post 3</h5>
-  <article>
-    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </article>
-
-  <h5>Post 4</h5>
-  <article>
-    lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </article>
-</section>
-
+<% @user.return_three_recent_posts(@user.id).each do |post| %>
+  <%= link_to user_post_path(@user.id, post.id) do %>
+    <section class='user posts'>
+      <h2>Post: <%= post.title%> </h2>
+      <p><%= post.text%></p>
+      <p class='cmts-likes'>
+        <span class='comments'>Comments: <%= post.comments.count %></span>
+        <span class='likes'>Likes: <%= post.likes.count %></span>
+      </p> 
+    </section>
+  <% end %>
+<% end %>
+<%= link_to 'See all posts', user_posts_path(@user.id), class: 'button' %>

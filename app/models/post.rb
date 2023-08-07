@@ -7,7 +7,10 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  def self.return_five_recent_comments(post_id)
+  # after_save :update_comments_counter, :update_likes_counter
+  after_create :update_author_posts_counter
+
+  def return_five_recent_comments(post_id)
     post1 = Post.find(post_id)
     post1.comments.order(created_at: :desc).limit(5)
   end
@@ -18,5 +21,9 @@ class Post < ApplicationRecord
 
   def update_likes_counter
     update_column(:likes_counter, likes.count)
+  end
+
+  def update_author_posts_counter
+    author.update_posts_counter
   end
 end

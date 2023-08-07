@@ -4,8 +4,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :photo
       t.string :bio
-      t.string :post_counter
-      t.string :integer
+      t.integer :post_counter, default: 0
 
       t.timestamps
     end

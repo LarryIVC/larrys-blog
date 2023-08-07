@@ -56,6 +56,7 @@
 - [⭐️ Validations, model specs]
 - [⭐️ Adding routes and controllers]
 - [⭐️ Adding controllers tests]
+- [⭐️ Views]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,7 +113,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [⭐️ Views]
 - [⭐️ Forms]
 - [⭐️ n+1 problems]
 - [⭐️ Add devise]
