@@ -28,7 +28,16 @@ button {
   border-radius: 15px;
   font-size: 1rem;
   width: auto;
+  transition: all 0.2s ease-in-out;
 }
+
+button:hover,
+.button:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
 
 a {
   display: flex;
@@ -146,4 +155,16 @@ body {
 .post-details>h2 {
   text-align: left;
   width: 100%;
+}
+
+.user form {
+  box-shadow: none;
+}
+
+.btn-like-comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
