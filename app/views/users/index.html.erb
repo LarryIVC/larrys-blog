@@ -12,5 +12,8 @@
     <% end %>
 </article>
 <% end %>
-<%= link_to "Add a post", new_user_post_path(@current_user), class: 'button w120' %>
+<% if @current_user.present? %>
+  <%= link_to "Add a post", new_user_post_path(@current_user), class: 'button w120' %>
+<% end %>
+
 

@@ -22,5 +22,11 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     @post = @user.posts.create(params.require(:post).permit(:title, :text))
+
+    if @post.save
+      redirect_to users_path
+    else
+      render :new
+    end
   end
 end
