@@ -12,4 +12,15 @@ class PostsController < ApplicationController
     head :not_found
     nil
   end
+
+  def new
+    # @user = User.find_by(id: params[:user_id])
+    @user = current_user
+    @post = Post.new
+  end
+
+  def create
+    @user = current_user
+    @post = @user.posts.create(params.require(:post).permit(:title, :text))
+  end
 end
