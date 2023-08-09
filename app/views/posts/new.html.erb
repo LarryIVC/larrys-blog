@@ -1,7 +1,7 @@
 <main>
   <h2>New Post</h2>
   <%= form_for [@user, @post] do |f|%>
-    <h2>User: <%= @user.name %></h2>
+    <h3>User: <%= @user.name %></h3>
     <%= f.label :title %>
     <%= f.text_field :title %>
 
