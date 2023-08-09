@@ -38,7 +38,6 @@ button:hover,
   transform: scale(1.1);
 }
 
-
 a {
   display: flex;
   text-decoration: none;
@@ -97,7 +96,7 @@ body {
   width: 80%;
 }
 
-.user>a {
+.user > a {
   justify-content: flex-start;
 }
 
@@ -118,7 +117,7 @@ body {
   padding: 10px;
 }
 
-.user-info>p {
+.user-info > p {
   text-align: right;
   width: 100%;
 }
@@ -152,7 +151,7 @@ body {
   width: 100%;
 }
 
-.post-details>h2 {
+.post-details > h2 {
   text-align: left;
   width: 100%;
 }
