@@ -28,6 +28,14 @@ button {
   border-radius: 15px;
   font-size: 1rem;
   width: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 a {
@@ -37,6 +45,36 @@ a {
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 3px 3px 10px #ccc;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 500px;
+  height: 100px;
 }
 
 body {
@@ -116,4 +154,20 @@ body {
 .post-details > h2 {
   text-align: left;
   width: 100%;
+}
+
+.user form {
+  box-shadow: none;
+}
+
+.btn-like-comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.w120 {
+  width: 120px;
 }

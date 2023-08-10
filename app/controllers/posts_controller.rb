@@ -12,4 +12,21 @@ class PostsController < ApplicationController
     head :not_found
     nil
   end
+
+  def new
+    # @user = User.find_by(id: params[:user_id])
+    @user = current_user
+    @post = Post.new
+  end
+
+  def create
+    @user = current_user
+    @post = @user.posts.create(params.require(:post).permit(:title, :text))
+
+    if @post.save
+      redirect_to users_path
+    else
+      render :new
+    end
+  end
 end

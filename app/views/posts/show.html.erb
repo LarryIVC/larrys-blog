@@ -8,6 +8,10 @@
       <span>likes: <%= @post.likes_counter || 0 %></span> </p>
   </header>
   <p> <%= @post.text %> </p>
+  <div class= 'btn-like-comment'>
+    <%= link_to 'Comment', new_user_post_comment_path(@user, @post), class: 'button' %>
+    <%= button_to 'Like', user_post_likes_path(@user, @post), method: :post %>
+  </div>
 </article>
 
 <article class = 'user bio'>
