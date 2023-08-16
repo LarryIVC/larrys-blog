@@ -1,33 +1,37 @@
 <h2>Here is the post for given User</h2>
-  <section class = 'user'>
-    <figure>
-      <image class = 'user-image' src = '<%= @user.photo %>' alt = '<%= @user.name %>'>
-    </figure>
-    <div class='user-info'>
-      <h2>User: <%= @user.name %> </h2>
-      <p>Number of posts: <%= @user.post_counter || 0 %> </p>
-    </div>
-  </section>
+<section class='user'>
+  <figure>
+    <img class='user-image' src = '<%= @user.photo %>' alt = '<%= @user.name %>'>
+  </figure>
+  <div class='user-info'>
+    <h2>User: <%= @user.name %> </h2>
+    <p>Number of posts: <%= @user.post_counter || 0 %> </p>
+  </div>
+</section>
 
-  <% @posts.each do |post| %>
-    <%# here is the link to the post %>
-    <%= link_to user_post_path(@user.id, post.id) do %>
-      <section class='user bio'  >
-        <h2>Post: <%= post.title %> </h2>
-        <p><%= post.text %></p>
-        <p class='cmts-likes'>
-          <span class='comments'>Comments: <%= post.comments.count %></span>
-          <span class='likes'>Likes: <%= post.likes.count %></span>
-        </p> 
-      </section>
-    <% end %>
+<% posts_with_comments = @posts.group_by(&:id) %>
 
+<% posts_with_comments.each do |post_id, grouped_posts| %>
+  <% post = grouped_posts.first %>
+  <%= link_to user_post_path(@user.id, post_id) do %>
     <section class='user bio'>
-      <h2>Comments</h2>
-      <% post.return_five_recent_comments(post.id).each do |comment| %>
-        <p><strong><%= comment.author.name %>: </strong> <%= comment.text %> </p>      
-      <% end %>
+      <h2>Post: <%= post.title %> </h2>
+      <p><%= post.post_text %></p>
+      <p class='cmts-likes'>
+        <span class='comments'>Comments: <%= post.comments_counter %></span>
+        <span class='likes'>Likes: <%= post.likes_counter %></span>
+      </p> 
     </section>
   <% end %>
-  
-  <button>Pagination</button>
+
+  <section class='user bio'>
+    <h2>Comments</h2>      
+    <ul class='comments-list'>
+      <% post.comments.with_author_name.each do |comment| %>
+        <li><strong><%= comment.author_name %>:</strong> <%= comment.text %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+
+<button>Pagination</button>
