@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find_by(id: params[:user_id])
-    @posts = @user.posts
+    @posts = Post.post_comments
   end
 
   def show
@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    # @user = User.find_by(id: params[:user_id])
     @user = current_user
     @post = Post.new
   end

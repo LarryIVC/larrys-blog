@@ -57,6 +57,8 @@
 - [⭐️ Adding routes and controllers]
 - [⭐️ Adding controllers tests]
 - [⭐️ Views]
+- [⭐️ Forms]
+- [⭐️ n+1 problems]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -100,12 +102,18 @@ Example command:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 ## 👤 **Larry Villegas**
 - GitHub: [@LarryIVC](https://github.com/LarryIVC)
 - Twitter: [@LarryVillegas](https://twitter.com/LarryVillegas)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/larryvillegascostas/)
+
+## 👤 **Muneeb UR Rehman**
+
+- GitHub: [@muneeb3123](https://github.com/muneeb3123)
+- Twitter: [@Hafizabd4](https://twitter.com/Hafizabd4)
+- LinkedIn: (https://www.linkedin.com/in/muneeb-rehman-01b6bb193/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,8 +121,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [⭐️ Forms]
-- [⭐️ n+1 problems]
 - [⭐️ Add devise]
 - [⭐️ Add authorization rules]
 - [⭐️ Integration specs for views]

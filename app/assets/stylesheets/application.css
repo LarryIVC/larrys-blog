@@ -77,6 +77,10 @@ textarea {
   height: 100px;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
