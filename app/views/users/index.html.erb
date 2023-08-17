@@ -1,4 +1,9 @@
 <h1>Here is the list of Users</h1>
+<%- if user_signed_in? %>
+  <h2>Hi <%= current_user.name %></h2>
+<%- else %>
+  <h2>You are not signed in.</h2>
+<%- end %>
 <% @users.each do |user| %>
   <article class='user'>
     <figure>
