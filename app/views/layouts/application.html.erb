@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    <ul class='nav justify,content-end'>
+      <%- if user_signed_in? %>
+        <li class='nav-item'>
+          <%= button_to 'Close session', destroy_user_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li class='nav-item'>
+          <%= link_to 'Sign in', new_user_session_path, class: 'button' %>
+        </li>
+        <li class= 'nav-item'>
+          <%= link_to 'Sign up', new_user_registration_path, class: 'button' %>
+        </li>        
+      <% end %>
+
+    </ul>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
