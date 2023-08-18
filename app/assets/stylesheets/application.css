@@ -88,6 +88,54 @@ body {
   justify-content: center;
 }
 
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px;
+  gap: 20px;
+}
+
+form,
+.nobtn {
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.menu-item {
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-items: center;
+  color: #4d597e;
+  border: 1px solid #4d597e;
+  transition: all 0.2s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+.menu-item:hover {
+  color: #4d597e70;
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.notice {
+  width: 80%;
+  background-color: #29713d;
+  color: #fff;
+}
+
+.alert {
+  width: 80%;
+  background-color: #a52a2a;
+  color: #fff;
+}
+
 .user {
   display: flex;
   flex-direction: row;

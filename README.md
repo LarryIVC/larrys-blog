@@ -17,7 +17,9 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Database](#database)
   - [Usage](#usage)
+  - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -59,6 +61,7 @@
 - [⭐️ Views]
 - [⭐️ Forms]
 - [⭐️ n+1 problems]
+- [⭐️ Add devise]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -75,18 +78,43 @@ Example commands:
 
 ```sh
   cd my-folder
+
   git clone git@github.com:LarryIVC/larrys-blog.git
 ```
 
 ### Prerequisites
 
-In order to run this project you need:
+> You need the following tools be installed in your computer:
 
-<!-- Example command: -->
+> - [Rails](https://guides.rubyonrails.org/)
+> - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+> - [Ruby](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
+> - IDE
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Install
+
+Install this project with:
+
+```sh
+  cd larrys-blog
+
+  bundle install
 ```
-  There is no prerequisites for this project
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 💾 Database
+
+Create the databases and run migrations with:
+
+```sh
+  rails db:create
+
+  rails db:migrate
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
 
@@ -95,7 +123,22 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-  rails s
+  rails s 
+```
+  or
+
+```sh
+  rails server
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Run tests
+
+To run tests, run the following command:
+
+
+```sh
+  rspec spec/
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,7 +164,6 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [⭐️ Add devise]
 - [⭐️ Add authorization rules]
 - [⭐️ Integration specs for views]
 - [⭐️ Add API endpoints]
