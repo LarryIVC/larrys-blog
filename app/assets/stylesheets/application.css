@@ -124,6 +124,18 @@ form,
   background-color: transparent;
 }
 
+.notice {
+  width: 80%;
+  background-color: #29713d;
+  color: #fff;
+}
+
+.alert {
+  width: 80%;
+  background-color: #a52a2a;
+  color: #fff;
+}
+
 .user {
   display: flex;
   flex-direction: row;
