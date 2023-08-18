@@ -88,6 +88,42 @@ body {
   justify-content: center;
 }
 
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px;
+  gap: 20px;
+}
+
+form,
+.nobtn {
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: none;
+}
+
+.menu-item {
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-items: center;
+  color: #4d597e;
+  border: 1px solid #4d597e;
+  transition: all 0.2s ease-in-out;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+.menu-item:hover {
+  color: #4d597e70;
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
 .user {
   display: flex;
   flex-direction: row;
@@ -100,7 +136,7 @@ body {
   width: 80%;
 }
 
-.user > a {
+.user>a {
   justify-content: flex-start;
 }
 
@@ -121,7 +157,7 @@ body {
   padding: 10px;
 }
 
-.user-info > p {
+.user-info>p {
   text-align: right;
   width: 100%;
 }
@@ -155,7 +191,7 @@ body {
   width: 100%;
 }
 
-.post-details > h2 {
+.post-details>h2 {
   text-align: left;
   width: 100%;
 }

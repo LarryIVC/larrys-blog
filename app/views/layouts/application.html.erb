@@ -11,17 +11,17 @@
   </head>
 
   <body>
-    <ul class='nav justify,content-end'>
+    <ul class='nav-menu'>
       <%- if user_signed_in? %>
         <li class='nav-item'>
-          <%= button_to 'Close session', destroy_user_session_path, method: :delete %>
+          <%= button_to 'Close session', destroy_user_session_path, method: :delete, class: 'menu-item nobtn' %>
         </li>
       <% else %>
         <li class='nav-item'>
-          <%= link_to 'Sign in', new_user_session_path, class: 'button' %>
+          <%= link_to 'Sign in', new_user_session_path, class: 'menu-item' %>
         </li>
         <li class= 'nav-item'>
-          <%= link_to 'Sign up', new_user_registration_path, class: 'button' %>
+          <%= link_to 'Sign up', new_user_registration_path, class: 'menu-item' %>
         </li>        
       <% end %>
 
