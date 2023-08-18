@@ -104,7 +104,7 @@ form,
   padding: 0;
   margin: 0;
   border: none;
-  border-radius: none;
+  border-radius: 0;
 }
 
 .menu-item {
@@ -136,7 +136,7 @@ form,
   width: 80%;
 }
 
-.user>a {
+.user > a {
   justify-content: flex-start;
 }
 
@@ -157,7 +157,7 @@ form,
   padding: 10px;
 }
 
-.user-info>p {
+.user-info > p {
   text-align: right;
   width: 100%;
 }
@@ -191,7 +191,7 @@ form,
   width: 100%;
 }
 
-.post-details>h2 {
+.post-details > h2 {
   text-align: left;
   width: 100%;
 }
